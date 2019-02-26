@@ -7,6 +7,8 @@ import org.openqa.selenium.interactions.Actions;
 
 public class DragAndDrop {
 
+	/*......@author aptester........*/
+	
 	public static void main(String[] args) {
 
 		System.setProperty("webdriver.chrome.driver","F:\\eclipse-workspace\\Selenium_Basic\\browser_drivers\\chromedriver.exe");
@@ -18,7 +20,7 @@ public class DragAndDrop {
 		driver.switchTo().frame(0);
 		Actions action=new Actions(driver);
 		action.clickAndHold(driver.findElement(By.xpath("//div[@id='draggable']"))).moveToElement(driver.findElement(By.xpath("//div[@id='droppable']"))).build().perform();
-		
+		System.out.println("hello");
 		//action.dragAndDrop(driver.findElement(By.xpath("//div[@id='draggable']")), driver.findElement(By.xpath("//div[@id='droppable']"))).build().perform();
 	}
 
